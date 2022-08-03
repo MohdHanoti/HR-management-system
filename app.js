@@ -13,7 +13,7 @@ const employee1 = {
 "Full Name": "Ghazi samer",
 Department : "Administration",
 Level : "Senior",
-"Image URL" : "",
+"Image URL" : "https://this-person-does-not-exist.com/img/avatar-34fc11a5dbdfe206c14f0953b7d9f0ae.jpg",
 Salary : "",
 uniqNum : function(){
     
@@ -41,7 +41,7 @@ const employee2 = {
     "Full Name": "Lana Ali",
     Department : "Finance",
     Level : "Senior",
-    "Image URL" : "",
+    "Image URL" : "https://this-person-does-not-exist.com/img/avatar-a48ad40feaf09748a1548a6b1f27f8f5.jpg",
     Salary : "",
     uniqNum : function(){
         
@@ -69,7 +69,7 @@ const employee3 = {
     "Full Name": "Tamara Ayoub",
     Department : "Marketing",
     Level : "Senior",
-    "Image URL" : "",
+    "Image URL" : "https://this-person-does-not-exist.com/img/avatar-c26cb8b4fbed5430a367d46a7dcbdf39.jpg",
     Salary : "",
     uniqNum : function(){
         
@@ -97,7 +97,7 @@ const employee4 = {
     "Full Name": "Safi Walid",
     Department : "Administration",
     Level : "Mid-Senior",
-    "Image URL" : "",
+    "Image URL" : "ce486fb24a540a9afe2491f5bf58e214",
     Salary : "",
     uniqNum : function(){
         
@@ -125,7 +125,7 @@ const employee5 = {
     "Full Name": "Omar Zaid",
     Department : "Development",
     Level : "Senior",
-    "Image URL" : "",
+    "Image URL" : "35c9b355c01c2cd5dccae38ea6c0f5b4",
     Salary : "",
     uniqNum : function(){
         
@@ -153,7 +153,7 @@ const employee6 = {
     "Full Name": "Rana Saleh",
     Department : "Development",
     Level : "Junior",
-    "Image URL" : "",
+    "Image URL" : "e9f324aaa70769f8ab119f784568a04f",
     Salary : "",
     uniqNum : function(){
         
@@ -181,7 +181,7 @@ const employee7 = {
     "Full Name": "Hadi",
     Department : "Finance",
     Level : "Mid-Senior",
-    "Image URL" : "",
+    "Image URL" : "https://this-person-does-not-exist.com/img/avatar-e146bd2a130a7352068817fa7be1ea6e.jpg",
     Salary : "",
     uniqNum : function(){
         
