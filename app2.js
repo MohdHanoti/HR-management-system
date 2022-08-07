@@ -1,13 +1,8 @@
 'use strict';
+const body =document.getElementsByTagName('body');
 //Global variables
 var counter=1000;
 
-// const EmployeeID=[];
-// for (counter;counter<1007;counter++){
-    
-//     EmployeeID.push(counter);
-
-// }
 
 const allEmployees=[];
 function Employee (FullName,Department,Level,ImageURL){
@@ -44,49 +39,55 @@ function Employee (FullName,Department,Level,ImageURL){
 allEmployees.push(this);
 }
 Employee.prototype.render=function(){
-    //for(let i=0;i<allEmployees.length;i++){
+    
 
-       // console.log(`${"Employee name"} : ${this.FullName}`);
-       document.write(`<p>${"Employee name"} : ${this.FullName}</p>`);
-       document.write(`<p>${"Department"} : ${this.Department}</p>`);
-       document.write(`<p>${"Employee salary"} : ${this.Salary}</p>`);
+        this.CalcSalary();
+        this.uniqNum();
+        const divEl = document.createElement('div');
+        //document.getElementById("MyElement").classList.add('MyClass');
+        body[0].appendChild(divEl);
+
+        const imgEl = document.createElement('img');
+    imgEl.src = this.ImageURL;
+    imgEl.alt = this.name;
+    divEl.appendChild(imgEl);
+
+        const pEl=document.createElement('p');
+        pEl.textContent= `Employee name : ${this.FullName}   ID : ${this.EmployeeID}`;
+        divEl.appendChild(pEl);
+
+        const pEl2=document.createElement('p');
+        pEl2.textContent= `Department : ${this.Department}`;
+        divEl.appendChild(pEl2);
+
+        const pEl3=document.createElement('p');
+        pEl3.textContent= `Employee salary : ${this.Salary}`;
+        divEl.appendChild(pEl3);
+
+        
+        
+
+
+    //    document.write(`<p>${"Employee name"} : ${this.FullName}</p>`);
+    //    document.write(`<p>${"Department"} : ${this.Department}</p>`);
+    //    document.write(`<p>${"Employee salary"} : ${this.Salary}</p>`);
        
        
 
        
     }
-//} 
+ 
 
-let Object1= new Employee("Ghazi samer","Administration","Senior","https://this-person-does-not-exist.com/img/avatar-34fc11a5dbdfe206c14f0953b7d9f0ae.jpg");
-let Object2=new Employee("Lana Ali","Finance","Senior","https://this-person-does-not-exist.com/img/avatar-a48ad40feaf09748a1548a6b1f27f8f5.jpg");
-let Object3=new Employee("Tamara Ayoub","Marketing","Senior","https://this-person-does-not-exist.com/img/avatar-c26cb8b4fbed5430a367d46a7dcbdf39.jpg");
-let Object4=new Employee("Safi Walid","Administration","Mid-Senior","https://this-person-does-not-exist.com/img/avatar-ce486fb24a540a9afe2491f5bf58e214.jpg");
-let Object5=new Employee("Omar Zaid","Development","Senior","https://this-person-does-not-exist.com/img/avatar-35c9b355c01c2cd5dccae38ea6c0f5b4.jpg");
-let Object6=new Employee("Rana Saleh","Development","Junior","https://this-person-does-not-exist.com/img/avatar-e9f324aaa70769f8ab119f784568a04f.jpg");
-let Object7=new Employee("Hadi","Finance","Mid-Senior","https://this-person-does-not-exist.com/img/avatar-e146bd2a130a7352068817fa7be1ea6e.jpg");
+let Object1= new Employee("Ghazi samer","Administration","Senior","./assets/Ghazi samer.png");
+let Object2=new Employee("Lana Ali","Finance","Senior","./assets/lanaAli.jpg");
+let Object3=new Employee("Tamara Ayoub","Marketing","Senior","./assets/Tamara.jpg");
+let Object4=new Employee("Safi Walid","Administration","Mid-Senior","./assets/Safi.jpg");
+let Object5=new Employee("Omar Zaid","Development","Senior","./assets/omar.jpg");
+let Object6=new Employee("Rana Saleh","Development","Junior","./assets/Rana.jpg");
+let Object7=new Employee("Hadi","Finance","Mid-Senior","./assets/Hadi.jpg");
 
 function callingFunctons(){
     
-    Object1.CalcSalary();
-    Object1.uniqNum();
-
-    Object2.CalcSalary();
-    Object2.uniqNum();
-
-    Object3.CalcSalary();
-    Object3.uniqNum();
-
-    Object4.CalcSalary();
-    Object4.uniqNum();
-
-    Object5.CalcSalary();
-    Object5.uniqNum();
-
-    Object6.CalcSalary();
-    Object6.uniqNum();
-
-    Object7.CalcSalary();
-    Object7.uniqNum();
 //prototype
     Object1.render();
     Object2.render();
@@ -98,5 +99,5 @@ function callingFunctons(){
     
 }
 callingFunctons();
-//console.log(allEmployees);
+
 
